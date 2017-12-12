@@ -1,28 +1,31 @@
 {
-  "consumer": {
-    "name": "myConsumer"
-  },
-  "provider": {
-    "name": "myProvider"
-  },
-  "interactions": [
-    {
-      "description": "a request for a roster",
-      "providerState": "I have a roster",
-      "request": {
-        "method": "GET",
-        "path": "/api/cool/stuff"
-      },
-      "response": {
-        "status": 200,
-        "headers": {
-        }
-      }
-    }
-  ],
-  "metadata": {
-    "pactSpecification": {
-      "version": "2.0.0"
-    }
-  }
+	"consumer": {
+		"name": "myConsumer"
+	},
+	"provider": {
+		"name": "myProvider"
+	},
+	"interactions": [
+		{
+			"description": "a DELETE request",
+			"providerState": "myState",
+			"request": {
+				"method": "DELETE",
+				"path": "/api/cool/stuff",
+				"body": {
+					"foo":"bar"
+				}
+			},
+			"response": {
+				"status": 200,
+				"headers": {
+				}
+			}
+		}
+	],
+	"metadata": {
+		"pactSpecification": {
+			"version": "2.0.0"
+		}
+	}
 }
