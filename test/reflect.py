@@ -46,7 +46,7 @@ class RequestHandler(BaseHTTPRequestHandler):
         print "------ Request End ------\n\n"
 
     do_PUT = do_POST
-    do_DELETE = do_GET
+    do_DELETE = do_POST
     do_HEAD = do_GET
 
 def convert(data):
